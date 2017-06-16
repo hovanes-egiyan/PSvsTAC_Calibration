@@ -468,14 +468,14 @@ jerror_t JEventProcessor_PSvsTAC_Calibration::fillHistosPS(
 			histoMap["PSC_TIME"][trigBit]->Fill( pscHit->t );
 		}
 		const DRFTime* rfTimeObjectBest;
-		eventLoop->GetSingle(rfTimeObjectBest, "", true);
-
-		const DRFTime* rfTimeObjectTOF;
-		eventLoop->GetSingle(rfTimeObjectTOF, "TOF", true);
+//		eventLoop->GetSingle(rfTimeObjectBest, "", true);
+//
+//		const DRFTime* rfTimeObjectTOF;
+//		eventLoop->GetSingle(rfTimeObjectTOF, "TOF", true);
 		const DRFTime* rfTimeObjectPSC;
 		eventLoop->GetSingle(rfTimeObjectPSC, "PSC", true);
-		const DRFTime* rfTimeObjectTAGH;
-		eventLoop->GetSingle(rfTimeObjectTAGH, "TAGH", true);
+//		const DRFTime* rfTimeObjectTAGH;
+//		eventLoop->GetSingle(rfTimeObjectTAGH, "TAGH", true);
 
 		if (rfTimeObjectPSC != nullptr && pscHit->has_TDC && pscHit->arm == DPSGeometry::kNorth ) {
 			volatile WriteLock rootRWLock(
